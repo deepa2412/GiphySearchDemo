@@ -1,0 +1,53 @@
+<div class="main-container">
+  <div class="gif-header-container">
+      <div class="gif-title-container">
+          {{gifTitle}}
+      </div>
+      <div class="gif-search-container">
+          <input name="search" class="gif-search-input" #searchTerm (keyup.enter)="performSearch(searchTerm)" placeholder="What you are looking for?">
+            
+          <button class="gif-search-button" (click)="performSearch(searchTerm)"><i class="fa fa-search" aria-hidden="true"></i></button>
+    
+          <div class="gif-info-bar">You can search any gif with our search</div>
+    
+          <div class="gif-more-info-bar">Everything you need for your creative projects. website,banners, presentation, magazines and advertising.</div>
+      </div>
+  </div>
+  <ng-container #gifResultsContainer></ng-container>
+  <ng-template #gifResultsTemplate>
+    <div class="gif-results-container">
+        <div class="gif-item" *ngFor="let g of gifImageResults">
+            <img src="{{g.images.original.url}}">
+        </div>
+    </div>
+</ng-template>
+  <ng-template #gifNoResultsFoundTemplate>
+    <div class="gif-no-records-found">
+      <p>No Records Found</p>
+    </div>
+  </ng-template>
+  <div class="gif-footer-container">
+    <footer>
+        <div class="footer-left">
+            <div class="footer-left-content">
+                Sign up and get free content everyweek
+                <div class="footer-sign-up-div">
+                    <input name="signup" class="signup-input" placeholder="Enter your email..">
+                
+                    <button class="signup-button">Sign Up</button>
+                </div>
+            </div>     
+        </div>
+        <div class="footer-right">
+            <p class="footer-browse-by-categories-div">Browse by categories</p>
+            <div class="footer-links">
+                <ul class="row-link" >
+                  <li *ngFor="let item of footerList"><a class="row-item" href="#">{{item.name}}</a></li>
+                </ul>
+            </div>
+          </div>
+    </footer>
+  </div>
+</div>
+
+

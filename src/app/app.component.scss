@@ -1,0 +1,125 @@
+.main-container{
+    height: 100%;
+    min-height: 100%;
+    .gif-header-container{
+        height: 30%;
+        background-color: #5bc0de;
+        text-align: center;
+    }
+    .gif-title-container{
+        font-size: 40px;
+        padding: 20px;
+        color: #ffffff;
+    }
+    .gif-search-container{
+        padding: 10px;
+        .gif-search-input{
+            padding: 12px;
+            font-size: 14px;
+            border: 1px solid lightslategrey;
+            width: 30%;
+            border-radius: 5px;
+        }
+        .gif-info-bar{
+            font-size: 18px;
+            padding: 10px;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .gif-more-info-bar{
+            font-size: 14px;
+            padding: 10px;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .gif-search-button{
+            width: 70px;
+            padding: 11px;
+            background: #89cff0;
+            color: white;
+            font-size: 17px;
+            border: 1px solid grey;
+            border-left: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    }
+    .gif-no-records-found{
+        padding: 100px;
+        text-align: center;
+    }
+    .gif-results-container{
+        padding: 10px;
+        padding-bottom: 100px;
+        .gif-item{
+            padding: 5px;
+            display: inline-block;
+        }
+    }
+
+    .gif-footer-container{
+        position: fixed;
+        height: 100px;
+        width: 100%;
+        background: #454545;
+        bottom: 0;
+        color: #ffffff;
+        .footer-left{
+            float: left;
+            width: 50%;
+            .footer-left-content{
+                padding: 10px;
+                margin-left: 100px;
+                .footer-sign-up-div{
+                    padding: 5px;
+                    padding-left: 0px;
+                    .signup-input{
+                        padding: 12px;
+                        font-size: 14px;
+                        border: 1px solid lightslategrey;
+                        border-radius: 5px;
+                    }
+                    .signup-button{
+                        margin-left: 20px;
+                        padding: 11px;
+                        background: #5bc0de;
+                        color: white;
+                        font-size: 14px;
+                        border: 1px solid grey;
+                        border-left: none;
+                        cursor: pointer;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+        .footer-right{
+            float: right;
+            width: 50%;
+            .footer-browse-by-categories-div{
+                margin: 5px;
+                font-size: 18px;
+            }
+            .footer-links{
+                width: 55%;
+                ul {
+                    &.row-link {
+                      display: inline-block;
+                      text-align: center; 
+                      margin: 5px;       
+                      position: relative;
+                      padding: 0px;       
+                      > li {
+                        display: inline-block;
+                        margin: 5px;
+                        .row-item{
+                            color: #e5e5e5;
+                            text-decoration: none;
+                        }
+                      }
+                    } 
+                }
+            }
+        }
+    }
+}
